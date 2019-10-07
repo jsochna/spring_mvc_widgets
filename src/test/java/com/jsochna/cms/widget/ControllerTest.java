@@ -30,7 +30,6 @@ public class ControllerTest extends AbstractHandlerTest {
 
     @Test
     public void testGet() {
-//        String widgetResponse = restTemplate.getForObject("http://localhost:" + port + "/widget/helloWorld", String.class);
         RequestEntity callWidget = RequestEntity.get(URI.create("http://localhost:" + port))
                 .header(WidgetHandlingMapping.CMS_WIDGET_HEADER, "helloWorld")
                 .build();
